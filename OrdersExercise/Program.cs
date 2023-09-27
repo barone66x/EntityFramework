@@ -25,7 +25,7 @@ namespace OrdersExercise
             string input = "";
             while (input != "e")
             {
-                Console.WriteLine("inserisci c per creare utente, l per lista ordini, d per dettaglio ordine, o per creare ordine ");
+                Console.WriteLine("inserisci c per creare utente, l per lista ordini, d per dettaglio ordine, o per creare ordine, e per uscire");
                 input = Console.ReadLine();
                 input.ToLower();
                 switch (input)
@@ -54,13 +54,17 @@ namespace OrdersExercise
                         break;
 
                     case "e":
-                        return;
+                        Console.WriteLine("uscita in corso");
+                        break;
 
                     default:
                         Console.WriteLine("scelta non valida");
                         break;
                 }
+
             }
+            Console.ReadLine();
+            return;
 
 
 

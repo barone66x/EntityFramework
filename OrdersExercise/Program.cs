@@ -281,10 +281,10 @@ namespace OrdersExercise
                     //item item = ctx.items.Find(itemss[i]);
                     Console.WriteLine("inserisci quantità (manca controllo)");
                     int quantita = int.Parse(Console.ReadLine());
-                    Console.WriteLine("inserisci prezzo (manca controllo)");
+                    Console.WriteLine("inserisci prezzo singolo (manca controllo)");
                     int prezzo = int.Parse(Console.ReadLine());
 
-                    orderitem o = new orderitem() { orderid = currentOrderNumber, name = itemss[input], price = prezzo, qty = quantita };
+                    orderitem o = new orderitem() { orderid = currentOrderNumber, name = itemss[input], price = prezzo * quantita, qty = quantita };
                     ctx.orderitems.Add(o);
                     Console.WriteLine("inserire e per uscire, un tasto per inserire altro item nell'ordine");
                     scelta = Console.ReadLine();
